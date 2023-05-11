@@ -7,7 +7,8 @@ export default function (props) {
  
     const handleUpClick = () => {
         let newText = text.toUpperCase();
-        setText(newText)
+        setText(newText);
+      console.log('test')
         
     }
     const handleLowClick = () =>{
