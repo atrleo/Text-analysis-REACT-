@@ -20,6 +20,9 @@ export default function (props) {
         // console.log("On Change");
         setText(event.target.value);
     } 
+    const handleMsgCkick =() =>{
+        alert(404);
+    }
 
   
     return (
@@ -31,6 +34,7 @@ export default function (props) {
                 <textarea value={text}  onChange={handleOnChange} className="form-control border" id="myBox" rows="8" ></textarea>
                 <button className="btn btn-primary mx-2 my-2"  onClick={handleUpClick}>Change to UPPER CASE</button>
                 <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>Comvert To lowercase</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleMsgCkick}>Opps message</button>
             </div>
         
         </div> 
