@@ -38,7 +38,7 @@ export default function (props) {
             <p>{text.split(" ").length} words and {text.length} characters.</p>
             <p>{0.008*text.split(" ").length} minutes to read</p>
             <h2>Preview</h2>
-            <h1>Preview2</h1>
+         
             <p>{text}</p>   
         </div>
 
