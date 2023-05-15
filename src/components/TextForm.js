@@ -14,6 +14,10 @@ export default function (props) {
         let newText=text.toLowerCase();
         setText(newText);
     }
+
+    const handleClearClick = () => {
+        setText("");
+    }
     
     const handleOnChange = (event) => {
         // console.log("On Change");
@@ -30,6 +34,7 @@ export default function (props) {
                 <textarea value={text}  onChange={handleOnChange} className="form-control border" id="myBox" rows="8" ></textarea>
                 <button className="btn btn-primary mx-2 my-2"  onClick={handleUpClick}>Change to UPPER CASE</button>
                 <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>Change to lower case</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleClearClick}>Clear</button>
             </div>
         
         </div> 
