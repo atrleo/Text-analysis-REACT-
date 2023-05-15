@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 
 
 export default function (props) {
-    const [text,setText] = useState("Enter your text here....")
+    const [text,setText] = useState("")
  
     const handleUpClick = () => {
         let newText = text.toUpperCase();
@@ -37,7 +37,7 @@ export default function (props) {
             <h1>{props.summary}</h1>
             <p>{text.split(" ").length} words and {text.length} characters.</p>
             <p>{0.008*text.split(" ").length} minutes to read</p>
-            <h2>Preview</h2>
+            <h2>{props.prev}</h2>
             <p>{text}</p>   
         </div>
 

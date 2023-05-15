@@ -10,7 +10,7 @@ function App() {
       <Navbar title="TextUtelsis" />
 
       <div className="container my-3" >
-        <TextForm head="Enter your text to ANALYZE"  summary="Your text summary"/>
+        <TextForm head="Enter your text to ANALYZE"  summary="Your text summary " prev="Preview" />
         
 
       </div>
