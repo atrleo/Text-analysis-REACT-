@@ -18,6 +18,7 @@ export default function (props) {
 
     const handleClearClick = () => {
         setText("");
+        setSentenceCount(0);
     }
 
     const handleOnChange = (event) => {
@@ -58,7 +59,7 @@ export default function (props) {
                 <h1>{props.summary}</h1>
                 <p>{text.split(" ").length} words and {text.length} characters.</p>
                 <p>{0.008 * text.split(" ").length} minutes to read</p>
-                <p>The total number of sentence : {sentenceCount}</p>
+                <p>Total Sentences : {sentenceCount}</p>
                 <h2>{props.prev}</h2>
                 <p>{text}</p>
             </div>
