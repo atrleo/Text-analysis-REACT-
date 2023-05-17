@@ -1,12 +1,43 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 export default function About() {
+
+    const [myStyle, setMyStyle] = useState({
+        color:"white",
+        backgroundColor:'black',
+        border:"1px solid white"
+    });
+
+    const [btntext,setBtnText] = useState("Enable Light Mode")
+
+
+        const toggleButton =() =>{
+            if(myStyle.color=='white')
+            {
+                setMyStyle({
+                    color:'black',
+                    backgroundColor:"white",
+                    border:"1px solid white"
+                })
+                setBtnText('Enabale Dark Mode')
+            }
+            else{
+                setMyStyle({
+                    color:"white",
+                    backgroundColor:"black",
+                    border:"1px solid black",
+                })
+                setBtnText('Enable light Mode')
+            }
+        }
+
     return (
-        <div className='container'>
+        <div className='container' style={myStyle} >
             <h1 className='my-3 mx-3'>About Us</h1>
-            <div className="accordion accordion-flush" id="accordionFlushExample">
+            <div className="accordion accordion-flush" id="accordionFlushExample" > 
                 <div className="accordion-item">
-                    <h2 className="accordion-header" id="flush-headingOne">
+                    <h2 className="accordion-header" id="flush-headingOne"  >
                         <button
                             className="accordion-button collapsed"
                             type="button"
@@ -24,7 +55,7 @@ export default function About() {
                         aria-labelledby="flush-headingOne"
                         data-mdb-parent="#accordionFlushExample"
                     >
-                        <div className="accordion-body">
+                        <div className="accordion-body" style={myStyle} >
                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
                             richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
                             brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -55,7 +86,7 @@ export default function About() {
                         aria-labelledby="flush-headingTwo"
                         data-mdb-parent="#accordionFlushExample"
                     >
-                        <div className="accordion-body">
+                        <div className="accordion-body" style={myStyle}>
                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
                             richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
                             brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -86,7 +117,7 @@ export default function About() {
                         aria-labelledby="flush-headingThree"
                         data-mdb-parent="#accordionFlushExample"
                     >
-                        <div className="accordion-body">
+                        <div className="accordion-body" style={myStyle}>
                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
                             richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
                             brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -99,7 +130,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <button className="btn btn-dark mx-3 mt-3">Enable Dark mode</button>
+            <button className="btn btn-dark mx-3 mt-3 mb-3" onClick={toggleButton} >{btntext}</button>
         </div>
     )
 }
