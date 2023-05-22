@@ -41,7 +41,11 @@ export default function (props) {
         return filteredSentences.length;
     };
 
-
+    const handleCopy= () => {
+        var text = document.getElementById('myBox');
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
     return (
         <>
             <div>
@@ -52,6 +56,7 @@ export default function (props) {
                     <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Change to UPPER CASE</button>
                     <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>Change to lower case</button>
                     <button className="btn btn-primary mx-2 my-2" onClick={handleClearClick}>Clear</button>
+                    <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy</button>
                 </div>
 
             </div>
