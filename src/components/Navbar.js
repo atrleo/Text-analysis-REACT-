@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 //while passing the prop Navbar(prop) is necessary.
 export default function Navbar(props) {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
             <div className="container-fluid">
                 <button
                     className="navbar-toggler"
@@ -35,20 +35,10 @@ export default function Navbar(props) {
 
 
                     </ul>
-                    <form className="d-flex input-group w-auto">
-                        <input
-                            type="search"
-                            className="form-control"
-                            placeholder="Text"
-                            aria-label="Search"
-                        />
-
-                        <span className="input-group-text border-0 d-none d-lg-flex"
-                        ><i className="fas fa-search"></i
-                        ></span>
-
-
-                    </form>
+                    <div className={`orm-check form-switch text-${props.mode=='light'?'dark':'light'}`}>
+                        <input className="form-check-input"  onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable DarkMode</label>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -56,10 +46,10 @@ export default function Navbar(props) {
 }
 
 Navbar.propTypes = {
-            title: PropTypes.string,
-            home: PropTypes.string,
+    title: PropTypes.string,
+    home: PropTypes.string,
 };
-Navbar.defaultProps ={
+Navbar.defaultProps = {
     title: 'set title here',
     home: 'Home',
 };
