@@ -49,10 +49,10 @@ export default function (props) {
     return (
         <>
             <div>
-                <div className="form-outline " >
+                <div className="form-outline "  style={{color:props.mode==="dark"?"white":"black"}}>
                     <h1>{props.head}</h1>
 
-                    <textarea value={text} onChange={handleOnChange} className="form-control border" id="myBox" rows="8" ></textarea>
+                    <textarea value={text} onChange={handleOnChange} style={{color:props.mode==="dark"?"white":"black"}} className="form-control border" id="myBox" rows="8" ></textarea>
                     <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Change to UPPER CASE</button>
                     <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>Change to lower case</button>
                     <button className="btn btn-primary mx-2 my-2" onClick={handleClearClick}>Clear</button>
@@ -60,7 +60,7 @@ export default function (props) {
                 </div>
 
             </div>
-            <div className="container my-2" >
+            <div className="container my-2"   style={{color:props.mode==="dark"?"white":"black"}}>
                 <h1>{props.summary}</h1>
                 <p>{text.split(" ").length} words and {text.length} characters.</p>
                 <p>{0.008 * text.split(" ").length} minutes to read</p>
