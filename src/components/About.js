@@ -92,7 +92,7 @@ const toggleButton =() =>{
                             et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
                             sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
                             craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                            heard of them accusamus labore sustainable VHS.
+                            heard of them accusamus labore sustainable VHS.     
                         </div>
                     </div>
                 </div>
