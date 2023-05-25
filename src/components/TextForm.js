@@ -8,17 +8,20 @@ export default function (props) {
 
     const handleUpClick = () => {
         let newText = text.toUpperCase();
-        setText(newText)
+        setText(newText);
+        props.showAlert("Converted to UpperCase!!","success");
 
     }
     const handleLowClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to LowerCase!!","success");
     }
 
     const handleClearClick = () => {
         setText("");
         setSentenceCount(0);
+        props.showAlert("Cleard text!!","warning");
     }
 
     const handleOnChange = (event) => {

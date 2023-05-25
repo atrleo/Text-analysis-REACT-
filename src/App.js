@@ -20,7 +20,6 @@ function App() {
 
 
 
-
 const toggleMode = () => {
   if (mode === 'light') {
     setMode('dark');
@@ -32,7 +31,7 @@ const toggleMode = () => {
     setMode('light');
     setChange('Enable DarkMode');
     document.body.style.backgroundColor = "white";
-    showAlert('Light mode has been Enabled','success');
+    showAlert('LightMode has been Enabled','success');
   }
 };
 
@@ -43,7 +42,7 @@ return (
     <Alert alert={alert} />
 
     <div className="container my-3" >
-      <TextForm head="Enter your text to ANALYZE" mode={mode} summary="Your text summary " prev="Preview" />
+      <TextForm head="Enter your text to ANALYZE" showAlert={showAlert} mode={mode} summary="Your text summary " prev="Preview" />
       {/* <About /> */}
 
     </div>
