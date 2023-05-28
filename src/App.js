@@ -9,13 +9,16 @@ import React, { useState } from 'react';
 
 function App() {
   const [mode, setMode] = useState('light');
-  const [change, setChange] = useState("Enable DarkMode ")
+  const [change, setChange] = useState("Enable DarkMode ");
   const [alert, setAlert] = useState(null);
   const showAlert = (messege, type) => {
     setAlert({
      msg:messege,
       type: type
     });
+    setTimeout(() => {
+      showAlert(null);
+    }, 3000);
   }
 
 
@@ -32,6 +35,7 @@ const toggleMode = () => {
     setChange('Enable DarkMode');
     document.body.style.backgroundColor = "white";
     showAlert('LightMode has been Enabled','success');
+
   }
 };
 
