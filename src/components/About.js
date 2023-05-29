@@ -128,7 +128,7 @@ const toggleButton =() =>{
                     </div>
                 </div>
             </div>
-            <button className="btn btn-dark mx-3 mt-3 mb-3" onClick={toggleButton}>{btnText}</button>
+            <button className="btn btn-primary mx-3 mt-3 mb-3" onClick={toggleButton}>{btnText}</button>
         </div>
     )
 }
