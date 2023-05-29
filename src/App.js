@@ -42,7 +42,7 @@ const toggleMode = () => {
 return (
   <>
     {/* <Navbar title="textUtils2" home="home2" /> */}
-    <Navbar title="TextUtelsis" mode={mode} toggleMode={toggleMode} change={change} />
+    <Navbar title="TextAnalysis" mode={mode} toggleMode={toggleMode} change={change} />
     <Alert alert={alert} />
 
     <div className="container my-3" >
