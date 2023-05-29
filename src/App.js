@@ -4,7 +4,16 @@ import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+
 import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
+
 
 
 function App() {
@@ -13,7 +22,7 @@ function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (messege, type) => {
     setAlert({
-     msg:messege,
+      msg: messege,
       type: type
     });
     setTimeout(() => {
@@ -23,41 +32,53 @@ function App() {
 
 
 
-const toggleMode = () => {
-  if (mode === 'light') {
-    setMode('dark');
-    setChange('Enable LightMode');
-    document.body.style.backgroundColor = "#4f4f4f";
-    showAlert('DarkMode has been Enabled','success');
-  }
-  else {
-    setMode('light');
-    setChange('Enable DarkMode');
-    document.body.style.backgroundColor = "white";
-    showAlert('LightMode has been Enabled','success');
+  const toggleMode = () => {
+    if (mode === 'light') {
+      setMode('dark');
+      setChange('Enable LightMode');
+      document.body.style.backgroundColor = "#4f4f4f";
+      showAlert('DarkMode has been Enabled', 'success');
+    }
+    else {
+      setMode('light');
+      setChange('Enable DarkMode');
+      document.body.style.backgroundColor = "white";
+      showAlert('LightMode has been Enabled', 'success');
 
-  }
-};
+    }
+  };
 
-return (
+  return (
   <>
-    {/* <Navbar title="textUtils2" home="home2" /> */}
-    <Navbar title="TextAnalysis" mode={mode} toggleMode={toggleMode} change={change} />
-    <Alert alert={alert} />
 
-    <div className="container my-3" >
-      <TextForm head="Enter your text to ANALYZE" showAlert={showAlert} mode={mode} summary="Your text summary " prev="Preview" />
-      {/* <About /> */}
+      {/* <Navbar title="textUtils2" home="home2" /> */}
+      <Router>
+        <Navbar title="TextAnalysis" mode={mode} toggleMode={toggleMode} change={change} />
+        <Alert alert={alert} />
 
-    </div>
+        <div className="container my-3" >
+          <Routes>
+            <Route path="/about" element= {<About />}>
+              
+            </Route>
+
+            <Route path="/" element={  <TextForm head="Enter your text to ANALYZE" showAlert={showAlert} mode={mode} summary="Your text summary " prev="Preview" />}>
+              
+            </Route>
+          </Routes>
 
 
 
-  </>
-);
+
+        </div>
+
+      </Router>
+
+      </>
+      );
 }
 
 
-export default App;
+      export default App;
 
 
