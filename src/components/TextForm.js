@@ -54,23 +54,23 @@ export default function (props) {
         <>
             <div>
                 <div className="form-outline "  style={{color:props.mode==="dark"?"white":"black"}}>
-                    <h1 >{props.head}</h1>
+                    <h1 className='mb-4'>{props.head}</h1>
 
-                    <textarea value={text} onChange={handleOnChange} style={{color:props.mode==="dark"?"white":"black"}} className="form-control border" id="myBox" rows="8" ></textarea>
-                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleUpClick}>Change to UPPER CASE</button>
-                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleLowClick}>Change to lower case</button>
-                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleClearClick}>Clear</button>
-                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleCopy}>Copy</button>
+                    <textarea placeholder='Enter  text to analyze' value={text} onChange={handleOnChange} style={{color:props.mode==="dark"?"white":"black"}} className="form-control border" id="myBox" rows="8" ></textarea>
+                    <button disabled ={text.length===0} className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleUpClick}>Change to UPPER CASE</button>
+                    <button disabled ={text.length===0} className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleLowClick}>Change to lower case</button>
+                    <button disabled ={text.length===0} className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleClearClick}>Clear</button>
+                    <button disabled ={text.length===0} className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleCopy}>Copy</button>
                 </div>
 
             </div>
             <div className="container my-2"   style={{color:props.mode==="dark"?"white":"black"}}>
                 <h1>{props.summary}</h1>
                 <p>{text.split(" ").length > 1 ? text.split(" ").length - 1 : 0} words and {text.length} characters.</p>
-                <p>{0.008 * text.split(" ").length} minutes to read</p>
+                <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes to read</p>
                 <p>Total Sentences : {sentenceCount}</p>
                 <h2>{props.prev}</h2>
-                <p>{text}</p>
+                <p>{text.length>0?text:"Nothing to Preview!!"}</p>
             </div>
 
         </>

@@ -25,10 +25,10 @@ export default function Navbar(props) {
 
 
                     {/* Inorder to pass the promp we use {prop.title} */}
-                    <Link className="navbar-brand" to="/home">{props.title}</Link>
+                    <Link className="navbar-brand" to="/">{props.title}</Link>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/home">{props.home}</Link>
+                            <Link className="nav-link active" aria-current="page" to="/">{props.home}</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
