@@ -44,7 +44,7 @@ const toggleButton =() =>{
                             aria-expanded="false"
                             aria-controls="flush-collapseOne"
                         >
-                            Accordion Item #1
+                            Analyze your Text
                         </button>
                     </h2>
                     <div
@@ -54,14 +54,11 @@ const toggleButton =() =>{
                         data-mdb-parent="#accordionFlushExample"
                     >
                         <div className="accordion-body" >
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                            brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                            et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                            heard of them accusamus labore sustainable VHS.
+                            TextAalysis is used to analyaze differenet text form users. Here a user can know the number of
+                            words and sentences used in their text. TextAnalysis also has a feature which helps to know total
+                            minutes to read a given text. Additional features such as changing the given text to upperCase, 
+                            lowerCase, clearing the text, copying the text has been added.
+
                         </div>
                     </div>
                 </div>
@@ -75,7 +72,7 @@ const toggleButton =() =>{
                             aria-expanded="false"
                             aria-controls="flush-collapseTwo"
                         >
-                            Accordion Item #2
+                            Free To use
                         </button>
                     </h2>
                     <div
@@ -85,14 +82,8 @@ const toggleButton =() =>{
                         data-mdb-parent="#accordionFlushExample"
                     >
                         <div className="accordion-body" >
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                            brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                            et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                            heard of them accusamus labore sustainable VHS.     
+                            TextAnalysis is free to use for all our users. The main motive of creating this page
+                            was to analyze the given text of user.     
                         </div>
                     </div>
                 </div>
@@ -106,7 +97,7 @@ const toggleButton =() =>{
                             aria-expanded="false"
                             aria-controls="flush-collapseThree"
                         >
-                            Accordion Item #3
+                            Browser compatible
                         </button>
                     </h2>
                     <div
@@ -116,14 +107,7 @@ const toggleButton =() =>{
                         data-mdb-parent="#accordionFlushExample"
                     >
                         <div className="accordion-body" >
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                            brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                            et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
-                            heard of them accusamus labore sustainable VHS.
+                            TextAnalysis is compatible in all the browers used in our daily life.
                         </div>
                     </div>
                 </div>
