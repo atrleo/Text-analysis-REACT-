@@ -8,10 +8,10 @@ import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+
   Route,
   Routes,
-  Link
+
 } from "react-router-dom";
 
 
@@ -49,21 +49,21 @@ function App() {
   };
 
   return (
-  <>
+    <>
 
       {/* <Navbar title="textUtils2" home="home2" /> */}
       <Router>
         <Navbar title="TextAnalysis" mode={mode} toggleMode={toggleMode} change={change} />
-        <Alert alert={alert} />
+        <Alert alert={alert}/>
 
         <div className="container my-3" >
           <Routes>
-            <Route path="/about" element= {<About />}>
-              
+            <Route path="/about" element={<About mode={mode}/>}>
+
             </Route>
 
-            <Route path="/home" element={  <TextForm head="Enter your text to ANALYZE" showAlert={showAlert} mode={mode} summary="Your text summary " prev="Preview" />}>
-              
+            <Route path="/home" element={<TextForm head="Enter your text to ANALYZE" showAlert={showAlert} mode={mode} summary="Your text summary " prev="Preview" />}>
+
             </Route>
           </Routes>
 
@@ -74,11 +74,11 @@ function App() {
 
       </Router>
 
-      </>
-      );
+    </>
+  );
 }
 
 
-      export default App;
+export default App;
 
 

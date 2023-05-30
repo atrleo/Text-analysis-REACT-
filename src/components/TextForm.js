@@ -54,13 +54,13 @@ export default function (props) {
         <>
             <div>
                 <div className="form-outline "  style={{color:props.mode==="dark"?"white":"black"}}>
-                    <h1>{props.head}</h1>
+                    <h1 >{props.head}</h1>
 
                     <textarea value={text} onChange={handleOnChange} style={{color:props.mode==="dark"?"white":"black"}} className="form-control border" id="myBox" rows="8" ></textarea>
-                    <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Change to UPPER CASE</button>
-                    <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>Change to lower case</button>
-                    <button className="btn btn-primary mx-2 my-2" onClick={handleClearClick}>Clear</button>
-                    <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy</button>
+                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleUpClick}>Change to UPPER CASE</button>
+                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleLowClick}>Change to lower case</button>
+                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleClearClick}>Clear</button>
+                    <button className={`btn btn-${props.mode} mx-2 my-2`} onClick={handleCopy}>Copy</button>
                 </div>
 
             </div>
