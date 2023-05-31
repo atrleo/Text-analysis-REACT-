@@ -66,8 +66,8 @@ export default function (props) {
             </div>
             <div className="container my-2"   style={{color:props.mode==="dark"?"white":"black"}}>
                 <h1>{props.summary}</h1>
-                <p>{text.split(" ").length > 1 ? text.split(" ").length - 1 : 0} words and {text.length} characters.</p>
-                <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes to read</p>
+                <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+                <p>{0.008 *  text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Minutes to read</p>
                 <p>Total Sentences : {sentenceCount}</p>
                 <h2>{props.prev}</h2>
                 <p>{text.length>0?text:"Nothing to Preview!!"}</p>
